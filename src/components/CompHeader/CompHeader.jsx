@@ -1,5 +1,5 @@
 import { Breadcrumb, Layout, Menu } from 'antd';
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 export const CompHeader = () => (
   <Layout>
@@ -47,12 +47,6 @@ export const CompHeader = () => (
         Content
       </div>
     </Content>
-    <Footer
-      style={{
-        textAlign: 'center',
-      }}
-    >
-      Ant Design ©2018 Created by Ant UED
-    </Footer>
+  
   </Layout>
 );
