@@ -13,11 +13,8 @@ function App() {
 
   return (
     <>
-    <CompFunkoCard></CompFunkoCard>
     <CompHeader></CompHeader>
-    <CompLogin></CompLogin>
-    <CompFormFunko></CompFormFunko>
-    <CompFotter></CompFotter>
+
     </>
   )
 }

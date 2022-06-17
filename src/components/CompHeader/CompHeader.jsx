@@ -11,42 +11,17 @@ export const CompHeader = () => (
       }}
     >
       <div className="logo" />
-      <Menu
-        theme="white"
-        mode="horizontal"
-        defaultSelectedKeys={['2']}
-        items={new Array(3).fill(null).map((_, index) => ({
-          key: String(index + 1),
-          label: `Loja ${index + 1}`,
-        }))}
-      />
+      <Menu  mode="horizontal">
+        <Menu.Item>
+      Cadastrar novo
+       </Menu.Item>
+       <Menu.Item>
+      Loja De Funkos
+       </Menu.Item>
+       <Menu.Item>
+      Novo Usuario
+       </Menu.Item>
+    </Menu>
     </Header>
-    <Content
-      className="site-layout"
-      style={{
-        padding: '0 50px',
-        marginTop: 64,
-      }}
-    >
-      <Breadcrumb
-        style={{
-          margin: '16px 0',
-        }}
-      >
-        <Breadcrumb.Item>Home</Breadcrumb.Item>
-        <Breadcrumb.Item>List</Breadcrumb.Item>
-        <Breadcrumb.Item>App</Breadcrumb.Item>
-      </Breadcrumb>
-      <div
-        className="site-layout-background"
-        style={{
-          padding: 24,
-          minHeight: 380,
-        }}
-      >
-        Content
-      </div>
-    </Content>
-  
   </Layout>
 );
