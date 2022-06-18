@@ -1,15 +1,4 @@
-import {
-  Button,
-  Cascader,
-  DatePicker,
-  Form,
-  Input,
-  InputNumber,
-  Radio,
-  Select,
-  Switch,
-  TreeSelect,
-} from 'antd';
+import { Button, Col, Form, Input, Radio, Row, Switch } from 'antd';
 import { useState } from 'react';
 
 export const CompFormFunko = () => {
@@ -22,14 +11,14 @@ export const CompFormFunko = () => {
   return (
     <Form
       labelCol={{
-        span: 4,
+        span: 4
       }}
       wrapperCol={{
-        span: 14,
+        span: 5
       }}
       layout="horizontal"
       initialValues={{
-        size: componentSize,
+        size: componentSize
       }}
       onValuesChange={onFormLayoutChange}
       size={componentSize}

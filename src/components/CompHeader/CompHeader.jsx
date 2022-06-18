@@ -1,27 +1,16 @@
 import { Breadcrumb, Layout, Menu } from 'antd';
+import { Link } from 'react-router-dom';
 const { Header, Content } = Layout;
 
-export const CompHeader = () => (
-  <Layout>
-    <Header
-      style={{
-        position: 'fixed',
-        zIndex: 1,
-        width: '100%',
-      }}
-    >
-      <div className="logo" />
-      <Menu  mode="horizontal">
-        <Menu.Item>
-      Cadastrar novo
-       </Menu.Item>
-       <Menu.Item>
-      Loja De Funkos
-       </Menu.Item>
-       <Menu.Item>
-      Novo Usuario
-       </Menu.Item>
-    </Menu>
-    </Header>
-  </Layout>
-);
+export const CompHeader = () => {
+  const options = [
+    {
+      label: <Link to="/CadastroFunko">Cadastrar novo</Link>,
+      key: 'cadastroFunko'
+    },
+    { label: <Link to="">Loja de Funkos</Link>, key: 'lojaFunkos' },
+    { label: <Link to="">Novo Usuario</Link>, key: 'novoUsuario' }
+  ];
+
+  return <Menu mode="horizontal" items={options} />;
+};
