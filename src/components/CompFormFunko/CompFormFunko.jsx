@@ -12,7 +12,7 @@ import {
 } from 'antd';
 import { useState } from 'react';
 
-const App = () => {
+export const CompFormFunko = () => {
   const [componentSize, setComponentSize] = useState('default');
 
   const onFormLayoutChange = ({ size }) => {
@@ -62,5 +62,3 @@ const App = () => {
     </Form>
   );
 };
-
-export default App;
