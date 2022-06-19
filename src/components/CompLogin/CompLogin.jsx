@@ -71,6 +71,7 @@ const App = () => {
         <Button type="primary" htmlType="submit">
           Enviar
         </Button>
+        Or <a href="/CadastroUsuario">Não tem uma conta? Cadastre-se agora!</a>
       </Form.Item>
     </Form>
   );

@@ -9,7 +9,7 @@ export const CompHeader = () => {
       key: 'cadastroFunko'
     },
     { label: <Link to="">Loja de Funkos</Link>, key: 'lojaFunkos' },
-    { label: <Link to="">Novo Usuario</Link>, key: 'novoUsuario' }
+    { label: <Link to="/CadastroUsuario">Novo Usuario</Link>, key: 'novoUsuario' }
   ];
 
   return <Menu mode="horizontal" items={options} />;
