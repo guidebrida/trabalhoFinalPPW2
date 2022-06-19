@@ -1,5 +1,5 @@
 import { CompFunkoCard } from '../CompFunkoCard/CompFunkoCard';
 
-export const PagCadastroUsuarios = () => {
+export const PagLoja = () => {
   return <CompFunkoCard />;
 };

@@ -1,5 +1,5 @@
 import { CompLogin } from '../CompLogin/CompLogin';
 
-export const CompLogin = () => {
+export const PagLogin = () => {
   return <CompLogin />;
 };

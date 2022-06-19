@@ -8,7 +8,7 @@ export const CompHeader = () => {
       label: <Link to="/CadastroFunko">Cadastrar novo</Link>,
       key: 'cadastroFunko'
     },
-    { label: <Link to="">Loja de Funkos</Link>, key: 'lojaFunkos' },
+    { label: <Link to="/Loja">Loja de Funkos</Link>, key: 'lojaFunkos' },
     { label: <Link to="/CadastroUsuario">Novo Usuario</Link>, key: 'novoUsuario' }
   ];
 

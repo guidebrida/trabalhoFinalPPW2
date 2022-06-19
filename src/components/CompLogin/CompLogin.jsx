@@ -1,6 +1,6 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 
-const App = () => {
+export const CompLogin = () => {
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -71,10 +71,9 @@ const App = () => {
         <Button type="primary" htmlType="submit">
           Enviar
         </Button>
-        Or <a href="/CadastroUsuario">Não tem uma conta? Cadastre-se agora!</a>
+         <a href="/CadastroUsuario">Não tem uma conta? Cadastre-se agora!</a>
       </Form.Item>
     </Form>
   );
 };
 
-export default App;
