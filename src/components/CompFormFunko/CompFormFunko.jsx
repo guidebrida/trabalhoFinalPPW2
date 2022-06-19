@@ -23,11 +23,11 @@ export const CompFormFunko = () => {
       onValuesChange={onFormLayoutChange}
       size={componentSize}
     >
-      <Form.Item label="Form Size" name="size">
+      <Form.Item label="Tamanho do formulario" name="size">
         <Radio.Group>
-          <Radio.Button value="small">Small</Radio.Button>
-          <Radio.Button value="default">Default</Radio.Button>
-          <Radio.Button value="large">Large</Radio.Button>
+          <Radio.Button value="small">Pequeno</Radio.Button>
+          <Radio.Button value="default">Padrão</Radio.Button>
+          <Radio.Button value="large">Grande</Radio.Button>
         </Radio.Group>
       </Form.Item>
       <Form.Item label="Nome do funko">
