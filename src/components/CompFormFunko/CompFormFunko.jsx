@@ -33,7 +33,7 @@ export const CompFormFunko = () => {
       <Form.Item label="Nome do funko">
         <Input />
       </Form.Item>
-      <Form.Item label="descrição">
+      <Form.Item label="Descrição">
         <Input />
       </Form.Item>
       <Form.Item label="Preço">
