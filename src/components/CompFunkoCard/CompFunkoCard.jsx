@@ -1,7 +1,7 @@
 import { Card } from 'antd';
 const { Meta } = Card;
 
-const App = () => (
+export const CompFunkoCard = () => (
   <Card
     hoverable
     style={{
@@ -18,4 +18,3 @@ const App = () => (
   </Card>
 );
 
-export default App;
