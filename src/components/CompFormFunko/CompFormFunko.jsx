@@ -39,7 +39,7 @@ export const CompFormFunko = () => {
       <Form.Item label="Preço">
         <Input />
       </Form.Item>
-      <Form.Item label="Link">
+      <Form.Item label="Link da imagem">
         <Input />
       </Form.Item>
       <Form.Item label="A venda" valuePropName="checked">
