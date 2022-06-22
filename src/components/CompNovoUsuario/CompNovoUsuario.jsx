@@ -1,9 +1,12 @@
 import { Button, Checkbox, Form, Input } from 'antd';
+import axios from 'axios';
 
 export const CompNovoUsuario = () => {
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
+  const onFinish = async (values) => {
+      console.log(values);
+      const Result = await axios.post("http://localhost:5000/api/usuario/", values)
+      console.log(Result.data);
+    };
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -28,7 +31,7 @@ export const CompNovoUsuario = () => {
 
         <Form.Item
         label="Nome"
-        name="Nome"
+        name="nome"
         rules={[
           {
             required: true,
@@ -40,7 +43,7 @@ export const CompNovoUsuario = () => {
         </Form.Item>
       <Form.Item
         label="Usuario"
-        name="Usuario"
+        name="user"
         rules={[
           {
             required: true,
@@ -53,7 +56,7 @@ export const CompNovoUsuario = () => {
 
       <Form.Item
         label="Senha"
-        name="Senha"
+        name="senha"
         rules={[
           {
             required: true,
