@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LayoutBase } from '../components/LayoutBase/LayoutBase';
 import { PagCadastroFunkos } from '../components/PagCadastroFunkos/PagCadastroFunkos';
 import { PagCadastroUsuarios } from '../components/PagCadastroUsuario/PagCadastroUsuarios';
@@ -15,7 +15,7 @@ export const AppRoutes = () => {
           <Route path={'/CadastroUsuario'} element={<PagCadastroUsuarios />} />
           <Route path={'/loja'} element={<PagLoja />} />
           <Route path={'/Login'} element={<PagLogin />} />
-          
+          <Route path={'*'} element={<Navigate to='/loja' replace/>} />
         </Route>
 
         
