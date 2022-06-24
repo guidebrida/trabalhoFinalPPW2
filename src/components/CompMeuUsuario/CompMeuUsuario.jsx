@@ -1,7 +1,7 @@
 import { Col, Radio, Row, Tabs } from 'antd';
 import Column from 'antd/lib/table/Column';
 import { useState } from 'react';
-import { CompNovoUsuario } from '../CompNovoUsuario/CompNovoUsuario';
+import { CompCardMeuUsuario } from '../CompCardMeuUsuario/CompCardMeuUsuario';
 
 const { TabPane } = Tabs;
 
@@ -19,13 +19,13 @@ export const CompMeuUsuario = () => {
         tabPosition={mode}
         style={{
           height: 220,
-          marginLeft: '3%'
+          marginLeft: '5%'
         }}
       >
         {<TabPane tab={'Perfil'} key={1}>
             <Row>
                 {<Col span={24}>
-                    <CompNovoUsuario/>
+                    <CompCardMeuUsuario/>
                 </Col>} 
             </Row>
         </TabPane>}
