@@ -1,7 +1,19 @@
 import { Card } from 'antd';
 const { Meta } = Card;
+import { useState } from 'react';
 
-export const CompFunkoCard = () => (
+export const CompFunkoCard = () => {
+  const onload = async (values) => {  
+    try{
+      const Result = await axios.get("http://localhost:5000/api/funko/", values)
+      console.log(Result.status); 
+    }catch(error){
+      console.log(error.request.status)
+    }
+    
+    };
+  return (
+<>
   <Card
     hoverable
     style={{
@@ -16,5 +28,8 @@ export const CompFunkoCard = () => (
   >
     <Meta title="Europe Street beat" description="www.instagram.com" />
   </Card>
-);
+  </>
+  );
+};
+
 
