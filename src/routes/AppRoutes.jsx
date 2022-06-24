@@ -4,6 +4,7 @@ import { PagCadastroFunkos } from '../components/PagCadastroFunkos/PagCadastroFu
 import { PagCadastroUsuarios } from '../components/PagCadastroUsuario/PagCadastroUsuarios';
 import { PagLoja } from '../components/PagLoja/PagLoja';
 import { PagLogin } from '../components/PagLogin/PagLogin';
+import { PagMeuUsuario } from '../components/PagMeuUsuario/PagMeuUsuario';
 
 
 export const AppRoutes = () => {
@@ -15,10 +16,9 @@ export const AppRoutes = () => {
           <Route path={'/CadastroUsuario'} element={<PagCadastroUsuarios />} />
           <Route path={'/loja'} element={<PagLoja />} />
           <Route path={'/Login'} element={<PagLogin />} />
+          <Route path={'/MeuUsuario'} element={<PagMeuUsuario />} />
           <Route path={'*'} element={<Navigate to='/loja' replace/>} />
         </Route>
-
-        
       </Routes>
     </BrowserRouter>
   );

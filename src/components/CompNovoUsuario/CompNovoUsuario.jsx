@@ -1,4 +1,4 @@
-import { Alert, Button, Checkbox, Form, Input } from 'antd';
+import { Alert, Button, Checkbox, Form, Input, Row } from 'antd';
 import axios from 'axios';
 import { useState } from 'react';
 
@@ -29,7 +29,7 @@ export const CompNovoUsuario = () => {
         span: 8
       }}
       wrapperCol={{
-        span: 16
+        span: 8
       }}
       initialValues={{
         remember: true
@@ -39,7 +39,7 @@ export const CompNovoUsuario = () => {
       autoComplete="off"
     >
 
-        <Form.Item
+      <Form.Item
         label="Nome"
         name="nome"
         rules={[
@@ -50,7 +50,7 @@ export const CompNovoUsuario = () => {
         ]}
       >
         <Input />
-        </Form.Item>
+      </Form.Item>
       <Form.Item
         label="Usuario"
         name="user"
@@ -76,15 +76,14 @@ export const CompNovoUsuario = () => {
       >
         <Input.Password />
       </Form.Item>
-
       <Form.Item
         wrapperCol={{
-          offset: 8,
-          span: 16
+          offset: 10,
+          span: 24
         }}
       >
-        <Button type="primary" htmlType="submit">
-          Cadastrar
+        <Button type="primary" htmlType="submit" > 
+          Salvar
         </Button>
       </Form.Item>
     </Form>
