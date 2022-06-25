@@ -8,7 +8,8 @@ export const CompLogin = () => {
 
   const onFinish = async(values) => {
     try{
-      const Result = await axios.get("n ta cert", values)
+      console.log(values)
+      const Result = await axios.post("http://localhost:5000/api/usuario/login", values)
       setLogin(Result.data);
       
     }catch(error){
@@ -33,7 +34,7 @@ export const CompLogin = () => {
     >
       <Form.Item
         label="Usuario"
-        name="Usuario"
+        name="user"
         rules={[
           {
             required: true,
@@ -46,7 +47,7 @@ export const CompLogin = () => {
 
       <Form.Item
         label="Senha"
-        name="Senha"
+        name="senha"
         rules={[
           {
             required: true,
