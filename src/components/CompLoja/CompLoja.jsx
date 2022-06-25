@@ -17,12 +17,13 @@ export const CompLoja = () => {
      return (
           <>
 
-
-               <div>
+               <Row>
+               
                     {funko?.map((item) => (
                          <CompFunkoCard url={item.url} descricao={item.descricao} valor={item.valor}/>
                     ))}
-               </div>
+              
+               </Row>
           </>
      )
 };
