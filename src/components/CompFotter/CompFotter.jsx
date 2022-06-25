@@ -8,7 +8,7 @@ export const CompFotter = () => {
         textAlign: 'center'
       }}
     >
-      FunkoPop ©2022 Criado por Guilherme, Misael E Vinicius
+      FunkoPop ©2022 Criado por Guilherme, Misael e Vinicius
     </Footer>
   );
 };

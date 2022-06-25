@@ -6,13 +6,8 @@ import { useState } from 'react';
 export const CompNovoUsuario = () => {
   const [status, setStatus]= useState(null)
   const onFinish = async (values) => {  
-    try{
-      const Result = await axios.post("http://localhost:5000/api/usuario/", values)
-      setStatus(Result.status); 
-    }catch(error){
-      setStatus(error.request.status)
-    }
-    
+    const Result = await axios.post("http://localhost:5000/api/usuario/", values)
+     setStatus(Result.status); 
     };
 
   const onFinishFailed = (errorInfo) => {
@@ -21,9 +16,8 @@ export const CompNovoUsuario = () => {
 
   return (
     <>
-    {
-      status === 200 ? <Alert type='success' showIcon/> : status === 409 ? <Alert type='error' showIcon/> : null
-    }
+    status === 200 ? <Alert type='success' showIcon/> : null
+
     <Form
       name="basic"
       labelCol={{
