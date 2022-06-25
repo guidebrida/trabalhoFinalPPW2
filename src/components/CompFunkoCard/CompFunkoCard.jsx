@@ -17,7 +17,7 @@ export const CompFunkoCard = (props) => {
           <img src={props.url} />
         }
       >
-        <Meta title={props.descricao} description={props.valor} />
+        <Meta title={props.descricao}   description={"R$"+ props.valor} />
       </Card>
     </>
   );

@@ -1,16 +1,16 @@
 import { Card } from 'antd';
+const { Meta } = Card;
 
-export const CompCardMeuUsuario = () => (
+export const CompCardMeuUsuario = (props) => (
   <>
     <Card
-      title="Nome"
+      title= {props.nome}
       extra={<a href="#">Editar</a>}
       style={{
         width: '30%',
       }}
     >
-      <p>Usuário: </p> 
-      <p>Senha: </p>
+      <p>Usuário: {props.user}</p> 
     </Card>
   </>
 );
