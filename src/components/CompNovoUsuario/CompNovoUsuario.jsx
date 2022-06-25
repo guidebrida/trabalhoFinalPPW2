@@ -1,4 +1,3 @@
-
 import { Alert, Button, Checkbox, Form, Input } from 'antd';
 import axios from 'axios';
 import { useState } from 'react';
@@ -6,8 +5,13 @@ import { useState } from 'react';
 export const CompNovoUsuario = () => {
   const [status, setStatus]= useState(null)
   const onFinish = async (values) => {  
-    const Result = await axios.post("http://localhost:5000/api/usuario/", values)
-     setStatus(Result.status); 
+    try{
+      const Result = await axios.post("http://localhost:5000/api/usuario/", values)
+      setStatus(Result.status); 
+    }catch(error){
+      setStatus(error.request.status)
+    }
+    
     };
 
   const onFinishFailed = (errorInfo) => {
@@ -16,8 +20,9 @@ export const CompNovoUsuario = () => {
 
   return (
     <>
-    status === 200 ? <Alert type='success' showIcon/> : null
-
+    {
+      status === 200 ? <Alert type='success' showIcon/> : status === 409 ? <Alert type='error' showIcon/> : null
+    }
     <Form
       name="basic"
       labelCol={{
