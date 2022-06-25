@@ -7,7 +7,6 @@ export const CompFunkoCard = (props) => {
   return (
     <>
         {
-      console.log(props.url)
     }
       <Card
         hoverable

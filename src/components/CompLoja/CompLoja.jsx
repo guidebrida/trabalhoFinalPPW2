@@ -18,9 +18,9 @@ export const CompLoja = () => {
           <>
 
 
-               <div className="site-card-wrapper">
+               <div>
                     {funko?.map((item) => (
-                         <CompFunkoCard url={item.url} descricao={item.descricao} valor={item.valor} />
+                         <CompFunkoCard url={item.url} descricao={item.descricao} valor={item.valor}/>
                     ))}
                </div>
           </>

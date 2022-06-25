@@ -1,13 +1,21 @@
 import { Button, Checkbox, Form, Input } from 'antd';
+import axios from 'axios';
+import { useContext, useState } from 'react';
+import LoginContext from '../../context/ContextLogin'
 
 export const CompLogin = () => {
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
+  const {login, setLogin} = useContext(LoginContext)
 
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+  const onFinish = async(values) => {
+    try{
+      const Result = await axios.get("n ta cert", values)
+      setLogin(Result.data);
+      
+    }catch(error){
+      console.log(error.request.status)
+    }
+  }
+
 
   return (
     <Form
@@ -22,8 +30,6 @@ export const CompLogin = () => {
         remember: true
       }}
       onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
     >
       <Form.Item
         label="Usuario"
@@ -76,4 +82,5 @@ export const CompLogin = () => {
     </Form>
   );
 };
+
 
