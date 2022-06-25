@@ -5,6 +5,7 @@ import { PagCadastroUsuarios } from '../components/PagCadastroUsuario/PagCadastr
 import { PagLoja } from '../components/PagLoja/PagLoja';
 import { PagLogin } from '../components/PagLogin/PagLogin';
 import { PagMeuUsuario } from '../components/PagMeuUsuario/PagMeuUsuario';
+import { CompCheckLogin } from '../components/CompCheckLogin/CompCheckLogin';
 
 
 export const AppRoutes = () => {
@@ -12,11 +13,13 @@ export const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<LayoutBase />}>
-          <Route path={'/CadastroFunko'} element={<PagCadastroFunkos />} />
           <Route path={'/CadastroUsuario'} element={<PagCadastroUsuarios />} />
           <Route path={'/loja'} element={<PagLoja />} />
           <Route path={'/Login'} element={<PagLogin />} />
+          <Route element={<CompCheckLogin />}>
+          <Route path={'/CadastroFunko'} element={<PagCadastroFunkos />} />
           <Route path={'/MeuUsuario'} element={<PagMeuUsuario />} />
+          </Route>
           <Route path={'*'} element={<Navigate to='/loja' replace/>} />
         </Route>
       </Routes>
