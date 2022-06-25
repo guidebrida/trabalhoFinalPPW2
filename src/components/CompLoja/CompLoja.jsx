@@ -20,7 +20,7 @@ export const CompLoja = () => {
                <Row>
                
                     {funko?.map((item) => (
-                         <CompFunkoCard url={item.url} descricao={item.descricao} valor={item.valor}/>
+                         <CompFunkoCard key={item._id} url={item.url} descricao={item.descricao} valor={item.valor} sale={item.sale}/>
                     ))}
               
                </Row>
