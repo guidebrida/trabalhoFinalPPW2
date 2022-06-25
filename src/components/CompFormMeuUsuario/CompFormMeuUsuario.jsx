@@ -14,7 +14,6 @@ export const CompFormMeuUsuario = (props) => {
     form.setFieldsValue({
         nome:props.nome,
         usuario:props.user,
-        senha:props.senha 
     })
   }, [props])
   return (

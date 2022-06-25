@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Col, Form, Input } from 'antd';
 import axios from 'axios';
 import { useContext, useState } from 'react';
 import LoginContext from '../../context/ContextLogin'
@@ -25,10 +25,10 @@ export const CompLogin = () => {
       login ? <Navigate to="/Loja" replace /> : (  <Form
         name="basic"
         labelCol={{
-          span: 8
+          span: 6
         }}
         wrapperCol={{
-          span: 16
+          span: 12  
         }}
         initialValues={{
           remember: true
@@ -62,26 +62,22 @@ export const CompLogin = () => {
         </Form.Item>
   
         <Form.Item
-          name="remember"
-          valuePropName="checked"
           wrapperCol={{
-            offset: 8,
-            span: 16
-          }}
-        >
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item>
-  
-        <Form.Item
-          wrapperCol={{
-            offset: 8,
+            offset: 11,
             span: 16
           }}
         >
           <Button type="primary" htmlType="submit">
-            Enviar
+                Enviar
           </Button>
-           <a href="/CadastroUsuario">Não tem uma conta? Cadastre-se agora!</a>
+        </Form.Item>
+        <Form.Item
+          wrapperCol={{
+            offset: 10,
+            span: 16
+          }}
+        >
+          <a href="/CadastroUsuario">Não tem uma conta? Cadastre-se agora!</a>
         </Form.Item>
       </Form>)
     }

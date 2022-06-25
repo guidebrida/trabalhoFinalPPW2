@@ -1,8 +1,9 @@
 import { Col, Radio, Row, Tabs } from 'antd';
 import Column from 'antd/lib/table/Column';
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useEffect } from 'react';
+import LoginContext from '../../context/ContextLogin';
 import { CompCardMeuUsuario } from '../CompCardMeuUsuario/CompCardMeuUsuario';
 import { CompFormFunko } from '../CompFormFunko/CompFormFunko';
 import { CompFunkoCard } from '../CompFunkoCard/CompFunkoCard';
@@ -10,10 +11,12 @@ import { CompFunkoCard } from '../CompFunkoCard/CompFunkoCard';
 const { TabPane } = Tabs;
 
 export const CompMeuUsuario = () => {
+  const {login} = useContext(LoginContext)
   const [usuario, setUsuario] = useState(null)
      useEffect(() => {
           const pegarUsuario = async () => {
-            const { data } = await axios.get("http://localhost:5000/api/usuario/62b3a8b87991ed0682350e7d")
+            {console.log(login)}
+            const { data } = await axios.get(`http://localhost:5000/api/usuario/${login.id}`)
             setUsuario(data);
           }
           pegarUsuario();
