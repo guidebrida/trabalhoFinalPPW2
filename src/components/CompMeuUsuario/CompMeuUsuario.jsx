@@ -42,7 +42,7 @@ export const CompMeuUsuario = () => {
         {<TabPane tab={'Lista de Funkos'} key={2}>
           <Row>
             {usuario?.funkos?.map((item) => (
-              <CompFunkoCard url={item.url} descricao={item.descricao} valor={item.valor} />
+              <CompFunkoCard key={item._id}  url={item.url} descricao={item.descricao} valor={item.valor} />
             ))}
           </Row>  
         </TabPane>}

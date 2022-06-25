@@ -16,8 +16,6 @@ export const CompLoja = () => {
      }, [])
      return (
           <>
-
-
                <div>
                     {funko?.map((item) => (
                          <CompFunkoCard url={item.url} descricao={item.descricao} valor={item.valor}/>
