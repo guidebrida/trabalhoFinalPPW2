@@ -6,6 +6,7 @@ import { PagLoja } from '../components/PagLoja/PagLoja';
 import { PagLogin } from '../components/PagLogin/PagLogin';
 import { PagMeuUsuario } from '../components/PagMeuUsuario/PagMeuUsuario';
 import { CompCheckLogin } from '../components/CompCheckLogin/CompCheckLogin';
+import { PagEditarFunko } from '../components/PagEditarFunko/PagEditarFunko';
 
 
 export const AppRoutes = () => {
@@ -19,6 +20,7 @@ export const AppRoutes = () => {
           <Route element={<CompCheckLogin />}>
           <Route path={'/CadastroFunko'} element={<PagCadastroFunkos />} />
           <Route path={'/MeuUsuario'} element={<PagMeuUsuario />} />
+          <Route path={'/EditarFunko'} element={<PagEditarFunko />} />
           </Route>
           <Route path={'*'} element={<Navigate to='/loja' replace/>} />
         </Route>
