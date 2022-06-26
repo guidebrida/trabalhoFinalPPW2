@@ -7,6 +7,7 @@ import LoginContext from '../../context/ContextLogin';
 import { CompCardCadastroFunko } from '../CompCardCadastroFunko/CompCardCadastroFunko';
 import { CompCardListaDeFunkos } from '../CompCardListaDeFunkos/CompCardListaDeFunkos';
 import { CompCardMeuUsuario } from '../CompCardMeuUsuario/CompCardMeuUsuario';
+import { CompExcluirUsuario } from '../CompExcluirUsuario/CompExcluirUsuario';
 
 
 const { TabPane } = Tabs;
@@ -52,6 +53,9 @@ export const CompMeuUsuario = () => {
         </TabPane>}
         {<TabPane tab={'Cadastrar Funko'} key={3}>
               <CompCardCadastroFunko/>
+        </TabPane>}
+        {<TabPane tab={'Excluir Usuário'} key={4}>
+              <CompExcluirUsuario/>
         </TabPane>}
       </Tabs>
     </div>
