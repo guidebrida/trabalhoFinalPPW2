@@ -1,19 +1,28 @@
 import { Button, Checkbox, Form, Input } from 'antd';
-import { useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import LoginContext from '../../context/ContextLogin';
+import axios from 'axios';
 
 export const CompFormMeuUsuario = (props) => {
-    const [form] = Form.useForm()
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
-
+  const {login} = useContext(LoginContext)
+  const [status, setStatus]= useState(null)
+  const onFinish = async (values) => {  
+    try{
+      const Result = await axios.put(`http://localhost:5000/api/usuario/${login.id}`, values)
+      setStatus(Result.status); 
+    }catch(error){
+      setStatus(error.request.status)
+    }
+    
+    };
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
+  const [form] = Form.useForm()
   useEffect(() => {
     form.setFieldsValue({
         nome:props.nome,
-        usuario:props.user,
+        user:props.user
     })
   }, [props])
   return (
@@ -42,7 +51,7 @@ export const CompFormMeuUsuario = (props) => {
 
       <Form.Item
         label="Usuario"
-        name="usuario"
+        name="user"
       >
         <Input />
       </Form.Item>

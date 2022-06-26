@@ -4,9 +4,10 @@ import axios from 'axios';
 import { useContext, useState } from 'react';
 import { useEffect } from 'react';
 import LoginContext from '../../context/ContextLogin';
+import { CompCardCadastroFunko } from '../CompCardCadastroFunko/CompCardCadastroFunko';
+import { CompCardListaDeFunkos } from '../CompCardListaDeFunkos/CompCardListaDeFunkos';
 import { CompCardMeuUsuario } from '../CompCardMeuUsuario/CompCardMeuUsuario';
-import { CompFormFunko } from '../CompFormFunko/CompFormFunko';
-import { CompFunkoCard } from '../CompFunkoCard/CompFunkoCard';
+
 
 const { TabPane } = Tabs;
 
@@ -45,9 +46,12 @@ export const CompMeuUsuario = () => {
         {<TabPane tab={'Lista de Funkos'} key={2}>
           <Row>
             {usuario?.funkos?.map((item) => (
-              <CompFunkoCard key={item._id}  url={item.url} descricao={item.descricao} valor={item.valor} />
+              <CompCardListaDeFunkos key={item._id}  url={item.url} descricao={item.descricao} valor={item.valor} sale={item.sale}/>
             ))}
           </Row>  
+        </TabPane>}
+        {<TabPane tab={'Cadastrar Funko'} key={3}>
+              <CompCardCadastroFunko/>
         </TabPane>}
       </Tabs>
     </div>
