@@ -28,7 +28,7 @@ export const CompLogin = () => {
           span: 6
         }}
         wrapperCol={{
-          span: 12  
+          span: 13
         }}
         initialValues={{
           remember: true

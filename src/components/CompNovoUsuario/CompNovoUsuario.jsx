@@ -26,10 +26,10 @@ export const CompNovoUsuario = () => {
     <Form
       name="basic"
       labelCol={{
-        span: 8
+        span: 6
       }}
       wrapperCol={{
-        span: 16
+        span: 13
       }}
       initialValues={{
         remember: true
@@ -79,7 +79,7 @@ export const CompNovoUsuario = () => {
 
       <Form.Item
         wrapperCol={{
-          offset: 8,
+          offset: 11,
           span: 16
         }}
       >
