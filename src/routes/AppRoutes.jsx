@@ -20,7 +20,7 @@ export const AppRoutes = () => {
           <Route element={<CompCheckLogin />}>
           <Route path={'/CadastroFunko'} element={<PagCadastroFunkos />} />
           <Route path={'/MeuUsuario'} element={<PagMeuUsuario />} />
-          <Route path={'/EditarFunko'} element={<PagEditarFunko />} />
+          <Route path={'/EditarFunko/:id'} element={<PagEditarFunko />} />
           </Route>
           <Route path={'*'} element={<Navigate to='/loja' replace/>} />
         </Route>

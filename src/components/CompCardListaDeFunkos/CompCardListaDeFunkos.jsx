@@ -32,7 +32,7 @@ export const CompCardListaDeFunkos = (props) => {
         >
           <Meta title={props.descricao}   description={`R$ ${props.valor}, ${props.sale ? 'A venda' : 'Não está disponivel'}`} />
           <br />
-          <Button type="primary"  icon={<EditOutlined />} size={size} onClick={()=> navegacao("/EditarFunko")}> </Button>
+          <Button type="primary"  icon={<EditOutlined />} size={size} onClick={()=> navegacao(`/EditarFunko/${props.id}`)}> </Button>
           <Button type="primary" onClick={deletar} icon={<DeleteOutlined />} size={size} />
         </Card>)
       }

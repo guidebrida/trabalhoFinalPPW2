@@ -2,10 +2,12 @@ import { Alert, Button, Checkbox, Form, Input, InputNumber, Switch } from 'antd'
 import { useContext, useEffect, useState } from 'react';
 import LoginContext from '../../context/ContextLogin';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 export const CompEditarFunko = () => {
   const {login} = useContext(LoginContext)
- 
+  let {id} = useParams(); 
+  console.log(id)
   const [venda, setVenda] = useState(false)
   const [status, setStatus]= useState(null)
   const onFinish = async (values) => {  
@@ -13,7 +15,7 @@ export const CompEditarFunko = () => {
     try{
      
       console.log(body)
-      const Result = await axios.put(`http://localhost:5000/api/funko/${funko.id}`, JSON.stringify(body),{headers:{'Content-Type':'application/json'}})
+      const Result = await axios.put(`http://localhost:5000/api/funko/${id}`, JSON.stringify(body),{headers:{'Content-Type':'application/json'}})
       setStatus(Result.status); 
     }catch(error){
       setStatus(error.request.status)
