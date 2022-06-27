@@ -29,25 +29,12 @@ export const CompLoja = () => {
           const   pegarFunkos = async () => {
                   const { data } = await axios.get("http://localhost:5000/api/funko/valor")
                   setFunko(data);
-                  console.log(funko)
+               
              }
              pegarFunkos();
              
         })
-     console.log(funko)
-     let sortDesc = (a,b)=>{
-          if(a.descricao.toUpperCase()>b.descricao.toUpperCase()){
-               return 1
-          }
-          if(a.descricao.toUpperCase()<b.descricao.toUpperCase()){
-               return -1
-          }
-          return 0 
-        }
 
-        let sortValor = (a,b)=>{
-          return a.valor - b.valor
-     }
      
      const menu = (
           <Menu
@@ -70,7 +57,7 @@ export const CompLoja = () => {
           <>
           <Dropdown.Button
         overlay={menu}
-        onClick={() => enterLoading(1)}
+
       >
         Ordenar Por:
       </Dropdown.Button>
