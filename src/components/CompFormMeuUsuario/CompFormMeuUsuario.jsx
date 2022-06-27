@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Alert, Button, Checkbox, Form, Input } from 'antd';
 import { useContext, useEffect, useState } from 'react';
 import LoginContext from '../../context/ContextLogin';
 import axios from 'axios';
@@ -27,6 +27,10 @@ export const CompFormMeuUsuario = (props) => {
   }, [props])
   return (
     <>
+    {console.log(status)}
+    {
+      status === 200 ? <Alert type='success' style={{marginBottom:10 }} message="Usuário editado com Sucesso" showIcon/> : status === 409 ? <Alert type='error' showIcon/> : null
+    }
     <Form
       disabled={!props.editar}
       name="basic"
