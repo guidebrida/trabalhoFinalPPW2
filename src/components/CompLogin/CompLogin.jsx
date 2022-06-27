@@ -1,19 +1,22 @@
-import { Button, Checkbox, Col, Form, Input } from 'antd';
+import { Button, Checkbox, Col, Form, Input, Result,Alert } from 'antd';
 import axios from 'axios';
-import { useContext, useState } from 'react';
+import { useContext, useState, } from 'react';
 import LoginContext from '../../context/ContextLogin'
 import {Navigate} from "react-router-dom"
 
 
 export const CompLogin = () => {
   const {login, setLogin} = useContext(LoginContext)
+  const [status, setStatus] = useState(null)
 
   const onFinish = async(values) => {
     try{
       const Result = await axios.post("http://localhost:5000/api/usuario/login", values)
       setLogin(Result.data);
+
       console.log(Result.data);
     }catch(error){
+      setStatus(error.request.status)
       console.log(error.request.status)
     }
   }
@@ -35,6 +38,11 @@ export const CompLogin = () => {
         }}
         onFinish={onFinish}
       >
+        <>
+          {
+             status === 401 ? <Alert type='error' style={{marginBottom:10 }} message="Usuario ou senha icorretos" showIcon/> : null
+          }
+        </>
         <Form.Item
           label="Usuario"
           name="user"

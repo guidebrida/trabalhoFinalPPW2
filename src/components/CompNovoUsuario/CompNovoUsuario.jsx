@@ -21,7 +21,7 @@ export const CompNovoUsuario = () => {
   return (
     <>
     {
-      status === 200 ? <Alert type='success' showIcon/> : status === 409 ? <Alert type='error' showIcon/> : null
+      status === 200 ? <Alert style={{marginBottom:10 }}  type='success'message="Usuario Cadastrado com Sucesso" showIcon/> : status === 409 ? <Alert  style={{marginBottom:10 }}type='error' message="Esse usuário já se encontra cadastrado"showIcon/> : null
     }
     <Form
       name="basic"

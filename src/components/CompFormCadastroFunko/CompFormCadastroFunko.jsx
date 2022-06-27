@@ -27,7 +27,7 @@ export const CompFormCadastroFunko = () => {
   return (
     <>
     {
-      status === 200 ? <Alert type='success' showIcon/> : status === 409 ? <Alert type='error' showIcon/> : null
+      status === 200 ? <Alert  style={{marginBottom:10 }} type='success' message="Funko Cadastrado com Sucesso" showIcon/> : status === 409 ? <Alert type='error'message="Funko ja se encontra cadastrado" showIcon/> : null
     }
     <Form
       name="basic"

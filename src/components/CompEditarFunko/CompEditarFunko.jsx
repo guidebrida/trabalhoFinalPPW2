@@ -30,7 +30,7 @@ export const CompEditarFunko = () => {
   return (
     <>
     {
-      status === 200 ? <Alert type='success' showIcon/> : status === 409 ? <Alert type='error' showIcon/> : null
+      status === 200 ? <Alert type='success' style={{marginBottom:10 }} message="Funko editado com Sucesso" showIcon/> : status === 409 ? <Alert type='error' showIcon/> : null
     }
     <Form
       name="basic"
