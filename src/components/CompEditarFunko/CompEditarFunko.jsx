@@ -5,6 +5,7 @@ import axios from 'axios';
 
 export const CompEditarFunko = () => {
   const {login} = useContext(LoginContext)
+ 
   const [venda, setVenda] = useState(false)
   const [status, setStatus]= useState(null)
   const onFinish = async (values) => {  
@@ -12,7 +13,7 @@ export const CompEditarFunko = () => {
     try{
      
       console.log(body)
-      const Result = await axios.put(`http://localhost:5000/api/funko/${login.id}`, JSON.stringify(body),{headers:{'Content-Type':'application/json'}})
+      const Result = await axios.put(`http://localhost:5000/api/funko/${funko.id}`, JSON.stringify(body),{headers:{'Content-Type':'application/json'}})
       setStatus(Result.status); 
     }catch(error){
       setStatus(error.request.status)
