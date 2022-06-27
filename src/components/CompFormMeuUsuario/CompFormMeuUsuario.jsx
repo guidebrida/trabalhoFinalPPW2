@@ -49,6 +49,12 @@ export const CompFormMeuUsuario = (props) => {
       <Form.Item
         label="Nome"
         name="nome"
+        rules={[
+          {
+            required: true,
+            message: 'Por favor insira um Nome!'
+          }
+        ]}
       >
         <Input />
       </Form.Item>
@@ -56,6 +62,12 @@ export const CompFormMeuUsuario = (props) => {
       <Form.Item
         label="Usuario"
         name="user"
+        rules={[
+          {
+            required: true,
+            message: 'Por favor insira um Usuário!'
+          }
+        ]}
       >
         <Input />
       </Form.Item>
@@ -63,6 +75,12 @@ export const CompFormMeuUsuario = (props) => {
       <Form.Item
         label="Senha"
         name="senha"
+        rules={[
+          {
+            required: true,
+            message: 'Por favor insira uma Senha!'
+          }
+        ]}
       >
         <Input.Password />
       </Form.Item>

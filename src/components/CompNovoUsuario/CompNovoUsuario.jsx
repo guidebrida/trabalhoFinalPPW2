@@ -45,7 +45,7 @@ export const CompNovoUsuario = () => {
         rules={[
           {
             required: true,
-            message: 'Por favor insira seu Nome!'
+            message: 'Por favor insira um Nome!'
           }
         ]}
       >
@@ -57,7 +57,7 @@ export const CompNovoUsuario = () => {
         rules={[
           {
             required: true,
-            message: 'Por favor insira seu usuario!'
+            message: 'Por favor insira um Usuario!'
           }
         ]}
       >
@@ -70,7 +70,7 @@ export const CompNovoUsuario = () => {
         rules={[
           {
             required: true,
-            message: 'Por favor insira sua senha!'
+            message: 'Por favor insira uma Senha!'
           }
         ]}
       >
